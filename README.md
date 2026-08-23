@@ -46,7 +46,7 @@ More details of these caveats can be found in the DevNotes section.   But the go
 
 So the above tools will output images and CSVs of data which is great but it isn't centralized or easy to digest.  That is where an ics calendar comes into play. I started by writing in a SQLite database and it worked just fine but the output was really just a table. Sufficient but not super clear.  I really just wanted to know what the official magnitude and epicenter location are compared to what my house may have felt. I eventually landed on the idea of a calendar 'meeting' with all the information I wanted in it. That makes display super simple -- relatively. The other nice thing is USGS labels each earthquake event with an unique ID and PNSN has a page for each event.  So I included a link in the location  field of the calendar event to links directly to WAY more information that I could display, calculate, or understand.
 
-# What does My Qyake Shakes actually do then?
+# What does My Quake Shakes actually do then?
 
 Once a day it will...
 * Read the CSV file that includes the last downloaded date
