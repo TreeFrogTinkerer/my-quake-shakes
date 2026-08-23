@@ -67,4 +67,22 @@ The setup for the Home Assistant card / view I am using is also included!
 
 # Installation
 
+## Required Pre-Requisites
+* At least 8GB of FREE RAM (not total system RAM)
+ * If you do not have enough RAM the SAIpy process will fail
+ * You can shorten the duration of data to process down from 15 minutes which will helpful
+* Moderately fast x86_64 CPU
+ * This was built and tested on a AMD Ryzen Embedded V1605B CPU (4 cores/8 threads/mobile)
+ * It pegs all 8 CPU threads of the above processor while running
+ * Each 15 minute station sample takes about 1-2 minutes to run
+ * Faster the CPU the better it will run
+ * GPU NVIDIA CUDA acceleration is available in pytorch but it is untested in this configuration
+* python installed
+ * Technically on Windows you do not need to pre-install python as it is done with uv
+ * Linux most often comes with it installed but no need to downgrade to run My Quake Shakes that is take care of with uv
+* [uv](https://docs.astral.sh/uv/) installed
+
+## Optional Pre-Requisites
+
+
 # Configuration
