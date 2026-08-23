@@ -73,6 +73,7 @@ The setup for the Home Assistant card / view I am using is also included!
   * You can shorten the duration of data to process down from 15 minutes which will helpful
 * Moderately fast/modern x86_64 CPU
   * This was built and tested on a AMD Ryzen Embedded V1605B CPU (4 cores/8 threads/mobile)
+    * So by no means bleeding edge
   * It pegs all 8 CPU threads of the above processor while running
   * Each 15 minute station sample takes about 1-2 minutes to run
   * Faster the CPU the better it will run
