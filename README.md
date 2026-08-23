@@ -28,7 +28,7 @@ Now the 'fun' thing is through services like [Earthscope/IRIS](https://www.iris.
 
 ## SAIpy - AI Model Tool
 
-Enter [SAIpy](https://github.com/srivastavaresearchgroup/SAIPy).  This is a very cool publish research project that uses AI models to detect earthquakes AND calculate local magnitude from a SINGLE set of sensors.  AND it has built in ability to directly download from IRIS/Earthscope as long as you provide the proper station information. Oh we can do that.
+Enter [SAIpy](https://github.com/srivastavaresearchgroup/SAIPy).  This is a very cool [published research project](https://www.sciencedirect.com/science/article/pii/S0098300424001699) that uses AI models to detect earthquakes AND calculate local magnitude from a SINGLE set of sensors.  AND it has built in ability to directly download from IRIS/Earthscope as long as you provide the proper station information. Oh we can do that.
 
 I tried a few other tools without any luck.  SAIpy ended up working for me. I can't say if it is the best or anything like that as earthquake science is terribly complex but I can say I was able to get it to give me what I wanted. So I approve of it!  If you want some insight into the science of earthquake magnitude calculations [this article on the Pacific Northwest Seismic Network](https://pnsn.org/education/seismology/magnitude-intensity) website was very interesting.
 
