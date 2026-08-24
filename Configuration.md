@@ -82,7 +82,7 @@ What do these mean? And how to translate them to your `stations.csv`.  Let's sta
 
 Enter the first two characters followed by an asterisk in your `stations.csv`.  In the above example `HH*` was entered into the `stations.csv`
 
-What you just told the SAIpy / IRIS download is that you want to use ALL three channels that start with HH.  But what does HH mean and why don't we are about the last character?
+What you just told the SAIpy / IRIS download is that you want to use ALL three channels that start with HH.  But what does HH mean and why don't we are care about the last character?
 
 ### Types of Sensors Nomenclature
 
