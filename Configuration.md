@@ -66,7 +66,7 @@ You will need to collect some of the fields from the IRIS page for each sensor y
 
 You may need to cross check the code with the official [FDSN Network list](https://fdsn.org/networks/?initial=X&page=2&sort=-name).
 
-![Screenshot of the EDM sensor on the IRIS website](documentation_images/edm_initial.png)
+![Screenshot of the EDM sensor on the IRIS website](documentation_images/EDM_initial.png)
 
 `location` is always `*` as best I can tell at this time.
 
@@ -74,7 +74,7 @@ You may need to cross check the code with the official [FDSN Network list](https
 
 'channel'  this is essentially which set and  type of sensors do you want to download and process.  The view available options for the station select scroll down and click on the Advanced Features tab (Orange Box) then scroll down to the Channels option (Purple Box).
 
-![Screenshot of the EDM Advancted tab on sensor page of the IRIS website](documentation_images/edm_advanced.png)
+![Screenshot of the EDM Advancted tab on sensor page of the IRIS website](documentation_images/EDM_advanced.png)
 
 Here is where the 'fun' starts....
 
