@@ -84,6 +84,8 @@ Enter the first two characters followed by an asterisk in your `stations.csv`.  
 
 What you just told the SAIpy / IRIS download is that you want to use ALL three channels that start with HH.  But what does HH mean and why don't we are about the last character?
 
+### Types of Sensors Nomenclature
+
 The 3 characters are the SEED Code for the channels. Basically each letter of the 3 stands for something.
 
 * Character 1: Band Code -- Basically the sampling rate of the device and how fast it reacts
