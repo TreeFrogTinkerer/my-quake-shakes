@@ -52,7 +52,7 @@ In the end this is up to you but there are some things to consider.
 2) Who is running the sensor?
   1) Primarily this is a professional sensor vs citizen science project question
 3) What kind of sensor is it?
-  1) This is the biggest question and will be covered below in the Types of Sensors Nomenclature section for details
+  1) This is the biggest question and will be covered below in the [Types of Sensors Nomenclature](#types-of-sensors-nomenclature) section for details
   
 ### Step 2 - Enter Correct Settings from the IRIS Stations Page
 
