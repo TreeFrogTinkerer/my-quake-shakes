@@ -74,7 +74,7 @@ You may need to cross check the code with the official [FDSN Network list](https
 
 'channel'  this is essentially which set and  type of sensors do you want to download and process.  The view available options for the station select scroll down and click on the Advanced Features tab (Orange Box) then scroll down to the Channels option (Purple Box).
 
-![Screenshot of the EDM Advancted tab on sensor page of the IRIS website](documentation_images/EDM_advanced.png)
+![Screenshot of the EDM Advanced tab on sensor page of the IRIS website](documentation_images/EDM_advanced.png)
 
 Here is where the 'fun' starts....
 
@@ -102,6 +102,6 @@ The pairings I've seen so far are:
 * HN* - Broad band Low sensitivity (ie - so doesn't clip large earthquakes) accelerometer
 * EN* - Extremely Short Period accelerometer
 
-This is where selecting what station or what set of sensors is up to you.  It seems the H is better than the E and whether or not you are more interested in the bigger or smaller earthquakes for the H vs N for the second character.  And where the citizen science projects only seem to have the Exx sensors. I tend to be most interested in HH* sensors but if an EN* sesnor is closer I'll add that too.
+This is where selecting what station or what set of sensors is up to you.  It seems the Hxx is better than the Exx and whether or not you are more interested in the bigger or smaller earthquakes for the xHx vs xNx for the second character.  And where the citizen science projects only seem to have the Exx sensors. I tend to be most interested in HH* sensors but if an EN* sensor is closer I'll add that too.
 
 Repeat this process for each station you want to process and monitor.
