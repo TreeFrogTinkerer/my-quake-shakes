@@ -92,7 +92,7 @@ The 3 characters are the SEED Code for the channels. Basically each letter of th
 * Character 2: Instrument Code -- Basically what kind of sensors are in the array
 * Character 3: Orientation of the Sensor on the Channel -- Often (N)orth-South, (E)ast-West, (Z)Vertical
 
-So taking the one above we have HH* which means use the Broad Band, High Gain Seismometer, and use all 3 orientations. The *' is a wildcard.
+So taking the one above we have HH* which means use the Broad Band, High Gain Seismometer, and use all 3 orientations. The '*' is a wildcard.
 
 For more detailed information on this convention see [this page on the IRIS website.](https://ds.iris.edu/ds/nodes/dmc/data/formats/seed-channel-naming/) It is very thorough.  
 
