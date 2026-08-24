@@ -4,13 +4,17 @@
 - [X] Auto-calculate time for SAIpy / IRIS download from USGS Event data
 - [X] Automate rolling date so only dates unprocessed get download and processed
 - [X] Create functional loop to process event data and feed it to SAIpy
-- [X] Create functional error trap so if a download from IRIS gives a momentary connection error the script tries again instead of terminating the entire script as it was.
+- [X] Create functional error trap so if a download from IRIS gives a momentary connection error the script tries again.
+   - [X] Instead of terminating the entire script as it was.
 - [X] Create PNSN links from event numbers from USGS
-- [X] 
 - [X] Create functional ics calendar entries
 - [X] Hone ics calendar entries to display data most usefully
-- [X] Filter events to only create ics events for events that locally were sensed -- to prevent overwhelm of ics data / viewing (plenty of other ways to see quakes that happened)
-- [ ] Memory manage python.  Right now python doesn't release ram from each SAIpy event run.  Goal is to make each run a separate process so when done memory goes back into OS pool.  In theory this means we would only need about 4GB of available memory at any time vs 32 GB capping out on 2 days of events and killing the process.
+- [X] Filter events to only create ics events for events that locally were sensed. 
+  - [X] Prevent overwhelm of ics data / viewing (plenty of other ways to see quakes that happened)
+- [ ] Memory manage python. 
+  - [ ] Right now python doesn't release ram from each SAIpy event run.  
+  - [ ] Goal is to make each run a separate process so when done memory goes back into OS pool.  
+  - [ ] In theory this means we would only need about 4GB of available memory at any time vs 32 GB capping out on 2 days of events and killing the process.
 - [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
 
 # My Quake Shakes Introduction
