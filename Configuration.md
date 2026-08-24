@@ -98,9 +98,9 @@ For more detailed information on this convention see [this page on the IRIS webs
 
 The pairings I've seen so far are:
 
-HH* - Broad band High sensitivity (ie small earth quakes) seismometer
-HN* - Broad band Low sensitivity (ie - so doesn't clip large earthquakes) accelerometer
-EN* - Extremely Short Period accelerometer
+* HH* - Broad band High sensitivity (ie small earth quakes) seismometer
+* HN* - Broad band Low sensitivity (ie - so doesn't clip large earthquakes) accelerometer
+* EN* - Extremely Short Period accelerometer
 
 This is where selecting what station or what set of sensors is up to you.  It seems the H is better than the E and whether or not you are more interested in the bigger or smaller earthquakes for the H vs N for the second character.  And where the citizen science projects only seem to have the Exx sensors. I tend to be most interested in HH* sensors but if an EN* sesnor is closer I'll add that too.
 
