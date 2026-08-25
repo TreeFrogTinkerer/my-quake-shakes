@@ -11,7 +11,7 @@
 - [X] Hone ics calendar entries to display data most usefully
 - [X] Filter events to only create ics events for events that locally were sensed. 
   - [X] Prevent overwhelm of ics data / viewing (plenty of other ways to see quakes that happened)
-- [X] Memory manage python. 
+- [/] Memory manage python. 
   - [X] Right now python doesn't release ram from each SAIpy event run.  
   - [X] Goal is to make each run a separate process so when done memory goes back into OS pool.  
   - [X] In theory this means we would only need about 4GB of available memory at any time vs 32 GB capping out on 2 days of events and killing the process.
