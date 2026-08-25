@@ -11,10 +11,10 @@
 - [X] Hone ics calendar entries to display data most usefully
 - [X] Filter events to only create ics events for events that locally were sensed. 
   - [X] Prevent overwhelm of ics data / viewing (plenty of other ways to see quakes that happened)
-- [ ] Memory manage python. 
-  - [ ] Right now python doesn't release ram from each SAIpy event run.  
-  - [ ] Goal is to make each run a separate process so when done memory goes back into OS pool.  
-  - [ ] In theory this means we would only need about 4GB of available memory at any time vs 32 GB capping out on 2 days of events and killing the process.
+- [X] Memory manage python. 
+  - [X] Right now python doesn't release ram from each SAIpy event run.  
+  - [X] Goal is to make each run a separate process so when done memory goes back into OS pool.  
+  - [X] In theory this means we would only need about 4GB of available memory at any time vs 32 GB capping out on 2 days of events and killing the process.
 - [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
 - [ ] Clean up the code
 - [ ] Confirm documentation is done and accurate
@@ -103,6 +103,7 @@ The setup for the Home Assistant card / view I am using is also included!
   * Technically on Windows you do not need to pre-install python as it is done with uv
   * Linux most often comes with it installed but no need to downgrade to run My Quake Shakes that is take care of with uv
 * [uv](https://docs.astral.sh/uv/) installed
+* Clock and Time Zone set correctly on the host
 
 ## Optional Pre-Requisites
 

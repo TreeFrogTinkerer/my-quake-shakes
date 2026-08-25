@@ -105,3 +105,32 @@ The pairings I've seen so far are:
 This is where selecting what station or what set of sensors is up to you.  It seems the Hxx is better than the Exx and whether or not you are more interested in the bigger or smaller earthquakes for the xHx vs xNx for the second character.  And where the citizen science projects only seem to have the Exx sensors. I tend to be most interested in HH* sensors but if an EN* sensor is closer I'll add that too.
 
 Repeat this process for each station you want to process and monitor.
+
+### Step 3 - Start Date
+
+My Quake Shakes uses the `run_dates.csv` to know which date to start proessing.  By default this is empty and you need to add a start entry.
+
+![Screenshot of the example run_dates.csv file](documentation_images/run_dates_csv.png)
+
+All fields are in the following format:
+
+`FULL_YEAR-2_DIGITS_MONTH-DATE` in the above example cell A1 is: `2026-08-21` for August 21, 2026
+
+
+There are two columns:
+`run_on` - This is just the last time the script ran and is for human readable log. This date does NOT impact the script. Enter today's date.
+`last_day_processed` - This is the important date.  The script will download earthquake events the day after is entered here.   Enter the day BEFORE the day you'd like to process.  It will process all dates up until YESTERDAY.
+
+> [!TIP]
+> It is recommended to process no more than a week prior. If the script fails you lose all prior dates.  This prevents issues on a day failure basis but on a long processing it can cause much loss.
+
+# RUN Time
+
+That is everything.  Assuming all as been setup correctly you can manually give it a test run by:
+
+1) Activating the virtual python environment: `source .venv/bin/activate`
+2) Run the script: `python my_quake_shakes.py`
+
+## Output location
+
+The final `my_quake_shakes.ics` file is written to /var/www as it is was built for Home Assistant use and it needs to be served by a web server.
