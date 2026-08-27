@@ -16,6 +16,8 @@
   - [ ] Goal is to make each run a separate process so when done memory goes back into OS pool.  
   - [ ] In theory this means we would only need about 4GB of available memory at any time vs 32 GB capping out on 2 days of events and killing the process.
   - [ ] Hmmm got it cycling into it's own processes BUT the package from SAIpy is already
+- [ ] URL field seems to be .... wrong check assumptions on id information
+  - [X] Seems ok - USGS vs PNSN description are different  
 - [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
 - [ ] Clean up the code
 - [ ] Confirm documentation is done and accurate
