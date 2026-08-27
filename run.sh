@@ -15,6 +15,9 @@ home_radius=$(awk -F',' 'NR > 1 { print $3}' home_range.csv)
 usgs_api_url="https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=${usgs_start_date}&endtime=${usgs_stop_date}&latitude=${home_lat}&longitude=${home_long}&maxradiuskm=${home_radius}"
 wget $usgs_api_url -O usgs_downloaded_data.csv
 
+# Write a New Run line break to the log file for easier finding of run time blocks
+echo "----------------------------- New Run -----------------------------" >> "my_quake_shakes.log"
+
 # Cycle through the USGS downloaded events using headers with gawk. For each event pass it to the SAIpy based python script to process the event
 # Each run of python script is one event and closed after wards keeping ram as minimal usage as possible and predictible
 gawk --csv '
