@@ -21,7 +21,8 @@
   - [X] Seems ok - USGS vs PNSN description are different  
 - [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
 - [ ] Consider that if the script is interupted events will be written but it will run again as the final date isn't written until the end
-- [\] Clean up the code
+- [ ] Clean up the code
+  - [X] Pass 1 done
 - [ ] Confirm documentation is done and accurate
 
 # My Quake Shakes Introduction
