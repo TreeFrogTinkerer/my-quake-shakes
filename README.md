@@ -11,15 +11,17 @@
 - [X] Hone ics calendar entries to display data most usefully
 - [X] Filter events to only create ics events for events that locally were sensed. 
   - [X] Prevent overwhelm of ics data / viewing (plenty of other ways to see quakes that happened)
-- [ ] Memory manage python. 
+- [X] Memory manage python. 
   - [ ] Right now python doesn't release ram from each SAIpy event run.  
   - [ ] Goal is to make each run a separate process so when done memory goes back into OS pool.  
   - [ ] In theory this means we would only need about 4GB of available memory at any time vs 32 GB capping out on 2 days of events and killing the process.
-  - [ ] Hmmm got it cycling into it's own processes BUT the package from SAIpy is already
-- [ ] URL field seems to be .... wrong check assumptions on id information
+  - [ ] Hmmm got it cycling into it's own processes BUT the package from SAIpy is already has child processes
+  - [X] Rewrote it using bash for the USGS download and looping so each event is a seperate python instance and the max RAM is about 4 GB for 15 minute sample
+- [X] URL field seems to be .... wrong check assumptions on id information
   - [X] Seems ok - USGS vs PNSN description are different  
 - [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
-- [ ] Clean up the code
+- [ ] Consider that if the script is interupted events will be written but it will run again as the final date isn't written until the end
+- [\] Clean up the code
 - [ ] Confirm documentation is done and accurate
 
 # My Quake Shakes Introduction
