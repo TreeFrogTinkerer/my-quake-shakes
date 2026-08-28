@@ -85,7 +85,7 @@ So the above tools will output images and CSVs of data which is great but it isn
 
 # What does My Quake Shakes actually do then?
 
-Once a day it will...
+When run it will...
 * Read the CSV file that includes the last downloaded date
 * Download all earthquake events for the day after it last downloaded and the day before it is currently running in a radius you set around your location that you set
   * USHS only allows full day downloads and all times are in UTC
