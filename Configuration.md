@@ -1,6 +1,6 @@
 # Configuring My Quake Shakes
 
-Once installed you need to set some configurations for you to get usable data.  This is almost entirely done via CSV files in the repository along with a big of research on IRIS / Google.
+Once installed you need to set some configurations for you to get usable data.  This is almost entirely done via CSV files in the repository along with a big of research on Earthscope/IRIS & Google.
 
 # Home Range
 
@@ -50,17 +50,17 @@ In the end this is up to you but there are some things to consider.
 
 1) How close is it to the location you want to monitor?
 2) Who is running the sensor?
-  1) Primarily this is a professional sensor vs citizen science project question
+  * Primarily this is a professional sensor vs citizen science project question
 3) What kind of sensor is it?
-  1) This is the biggest question and will be covered below in the [Types of Sensors Nomenclature](#types-of-sensors-nomenclature) section for details
+  * This is the biggest question and will be covered below in the [Types of Sensors Nomenclature](#types-of-sensors-nomenclature) section for details
   
-### Step 2 - Enter Correct Settings from the IRIS Stations Page
+### Step 2 - Enter Correct Settings from the IRIS/Earthscope Stations Page
 
 ![Screenshot of the stations csv data with Mt St Helens data populated](documentation_images/stations_csv.png)
 
-You will need to collect some of the fields from the IRIS page for each sensor you'd like to use.
+You will need to collect some of the fields from the IRIS/Earthscope page for each sensor you'd like to use.
 
-`wsp` will always be `IRIS` for sensors
+`wsp` will always be `EARTHSCOPE` for sensors (formerly `IRIS` -- this will work but give a warning on each run)
 
 `network` and `station` can be gathered from the initial page.  The station ID is located in the yellow box at the top. In the follow example it is `EDM`. The `network` is a bit trickier and in this example it is UW which is located in the title.
 
@@ -72,7 +72,7 @@ You may need to cross check the code with the official [FDSN Network list](https
 
 `station_hr_name` is a human readable name you can set.  This was at one point used in displaying in the ics but currently is not used.  Still a good way to know what is what in human readable form.  This is a free field you choose to set.
 
-'channel'  this is essentially which set and  type of sensors do you want to download and process.  The view available options for the station select scroll down and click on the Advanced Features tab (Orange Box) then scroll down to the Channels option (Purple Box).
+`channel`  this is essentially which set and  type of sensors do you want to download and process.  The view available options for the station select scroll down and click on the Advanced Features tab (Orange Box) then scroll down to the Channels option (Purple Box).
 
 ![Screenshot of the EDM Advanced tab on sensor page of the IRIS website](documentation_images/EDM_advanced.png)
 
@@ -82,7 +82,7 @@ What do these mean? And how to translate them to your `stations.csv`.  Let's sta
 
 Enter the first two characters followed by an asterisk in your `stations.csv`.  In the above example `HH*` was entered into the `stations.csv`
 
-What you just told the SAIpy / IRIS download is that you want to use ALL three channels that start with HH.  But what does HH mean and why don't we are care about the last character?
+What you just told the SAIPy / IRIS download is that you want to use ALL three channels that start with HH.  But what does HH mean and why don't we are care about the last character?
 
 ### Types of Sensors Nomenclature
 
@@ -128,8 +128,7 @@ There are two columns:
 
 That is everything.  Assuming all as been setup correctly you can manually give it a test run by:
 
-1) Activating the virtual python environment: `source .venv/bin/activate`
-2) Run the script: `python my_quake_shakes.py`
+`./run.sh``
 
 ## Output location
 
