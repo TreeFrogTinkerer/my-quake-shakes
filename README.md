@@ -41,9 +41,6 @@ One option is the aforementioned citizen science sensor monitors but they are ve
 
 This tool downloads and processes raw seismic data, processes it to calculate the local magnitude, then packages it in an ics calendar file for easy viewing in any calendar application.  My focus was putting it into a Home Assistant dashboard which is easy enough using the "Remote Calendar" integration and an Atomic Calendar Revive card. 
 
-🎯: Displays the official magnitude from the USGS website
-🫨: Displays the local magnitude at the listed station(s)
-
 > [!IMPORTANT]
 > And to be **VERY** clear -- all the hard stuff in this project was done by others. Not me. All I did was make a wrapper to put around it and to publish the data in a way I found useful: a calendar view.
 
@@ -73,6 +70,15 @@ More details of these resource usages can be found in the DevNotes section.   Bu
 ## Viewing Output
 
 So the above tools will output images and CSVs of data which is great but it isn't centralized or easy to digest.  That is where an ics calendar comes into play. I started by writing in a SQLite database and it worked just fine but the output was really just a table. Sufficient but not super clear.  I really just wanted to know what the official magnitude and epicenter location are compared to what my house may have felt. I eventually landed on the idea of a calendar 'meeting' with all the information I wanted in it. That makes display super simple -- relatively. The other nice thing is USGS labels each earthquake event with an unique ID and PNSN has a page for each event.  So I included a link in the location  field of the calendar event to links directly to WAY more information that I could display, calculate, or understand.
+
+![Screenshot of output ics file showing offiical and local magnitude annotated](documentation_images/mon_aug_24_2026_EDM_example_annotated.png)
+
+* 🎯: Displays the official magnitude from the USGS website (Green Box)
+* 🫨: Displays the local magnitude at the listed station(s) (Yellow Boxes)
+* Local Time of Event (Purple Box)
+  * ics is written in UTC but the client will most often change it to your local time zone -- built in correction! YAY!
+* USGS Location Description (Red Box)
+* PNSN link to the event (Orange Box)
 
 > [!NOTE]
 > The description provided by USGS does **NOT** always match the description on the PNSN website.  AND sometimes magnitudes and locations are changed. the ics only writes the USGS description and magntiudes at the time the script was ran. It does **NOT** update them as scientists become more precise.
@@ -119,7 +125,7 @@ The setup for the Home Assistant card / view I am using is also included!
 ## Optional Pre-Requisites
 * Web server
   * If you plan to use Home Assistant this is mandatory
-  
+
 
 # Configuration
 
