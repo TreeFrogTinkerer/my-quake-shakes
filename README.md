@@ -21,9 +21,9 @@
   - [X] Seems ok - USGS vs PNSN description are different  
 - [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
 - [ ] Consider that if the script is interupted events will be written but it will run again as the final date isn't written until the end
-- [ ] Clean up the code
+- [X] Clean up the code
   - [X] Pass 1 done
-- [ ] Confirm documentation is done and accurate
+- [X] Confirm documentation is done and accurate
 
 # My Quake Shakes Introduction
 
@@ -106,6 +106,7 @@ The setup for the Home Assistant card / view I am using is also included!
 # Installation
 
 ## Required Pre-Requisites
+- [ ] Debian Trixie based OS on bare metal
 - [ ] At least 4GB of FREE RAM (not total system RAM)
   * If you do not have enough RAM the SAIpy process will fail
   * You need ~3GB of RAM per 15 minute raw data length
