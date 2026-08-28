@@ -106,22 +106,22 @@ The setup for the Home Assistant card / view I am using is also included!
 # Installation
 
 ## Required Pre-Requisites
-[ ] At least 4GB of FREE RAM (not total system RAM)
+- [ ] At least 4GB of FREE RAM (not total system RAM)
   * If you do not have enough RAM the SAIpy process will fail
   * You need ~3GB of RAM per 15 minute raw data length
   * By default My Quake Shakes uses 15 min samples but it can be extended or shortened as you like
-[ ] Moderately fast/modern x86_64 CPU
+- [ ] Moderately fast/modern x86_64 CPU
   * This was built and tested on a AMD Ryzen Embedded V1605B CPU (4 cores/8 threads/mobile)
     * So by no means bleeding edge
   * It pegs all 8 CPU threads of the above processor while running
   * Each 15 minute station sample takes about 1-2 minutes to run
   * Faster the CPU the better it will run
   * GPU NVIDIA CUDA acceleration is available in pytorch but it is untested in this configuration
-[ ] python installed
+- [ ] python installed
   * Any version the correct 3.11 will be installed in a virtual environment
-[ ] [uv](https://docs.astral.sh/uv/) installed
-[ ] git installed
-[ ] Clock and Time Zone set correctly on the host
+- [ ] [uv](https://docs.astral.sh/uv/) installed
+- [ ] git installed
+- [ ] Clock and Time Zone set correctly on the host
 
 ## Optional Pre-Requisites
 * Web server
