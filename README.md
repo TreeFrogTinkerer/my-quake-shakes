@@ -73,12 +73,12 @@ So the above tools will output images and CSVs of data which is great but it isn
 
 ![Screenshot of output ics file showing offiical and local magnitude annotated](documentation_images/mon_aug_24_2026_EDM_example_annotated.png)
 
-* 🎯: Displays the official magnitude from the USGS website (Green Box)
-* 🫨: Displays the local magnitude at the listed station(s) (Yellow Boxes)
-* Local Time of Event (Purple Box)
+* 🎯: Displays the official magnitude from the USGS website (🟩 Green Box)
+* 🫨: Displays the local magnitude at the listed station(s) (🟨 Yellow Boxes)
+* Local Time of Event (🟪 Purple Box)
   * ics is written in UTC but the client will most often change it to your local time zone -- built in correction! YAY!
-* USGS Location Description (Red Box)
-* PNSN link to the event (Orange Box)
+* USGS Location Description (🟥 Red Box)
+* PNSN link to the event (🟧 Orange Box)
 
 > [!NOTE]
 > The description provided by USGS does **NOT** always match the description on the PNSN website.  AND sometimes magnitudes and locations are changed. the ics only writes the USGS description and magntiudes at the time the script was ran. It does **NOT** update them as scientists become more precise.
