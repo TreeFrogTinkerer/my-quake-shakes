@@ -144,6 +144,20 @@ chmod +x install.sh
 
 # Configuration
 
+A few CSV files need to be edited with your information before getting personalized data.  
+
+[Those steps are detailed in the Configuration.md](Configuration.md)
+
+You can run it using the sample csv files as well if if you like though I'd highly recommend you change the date in `run_dates.csv` so you don't process a few years worth of quakes on the first go.
+
+# Running My Quake Shakes
+
+`./run.sh`
+
+The output will be in
+
+`/var/www/my-quake-shakes.ics`
+
 Some caveats about this tool are:
 * It uses local AI models so is very resourced intensive on your CPU / RAM
  * It can be run on NVIDIA GPUs though this repo isn't setup to do so because frankly I don't have one and was able to get it to run acceptably on a CPU only machine
