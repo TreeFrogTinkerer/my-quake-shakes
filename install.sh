@@ -46,3 +46,6 @@ python -m pip install requests lxml icalendar
 # Exit the virtual environmnet now that is configured
 deactivate
 
+# Remove testing branch after gawk installed
+sudo rm /etc/apt/sources.list.d/testing.list
+sudo apt update
