@@ -133,3 +133,13 @@ That is everything.  Assuming all as been setup correctly you can manually give 
 ## Output location
 
 The final `my_quake_shakes.ics` file is written to /var/www as it is was built for Home Assistant use and it needs to be served by a web server.
+
+# Home Assistant Integration
+
+By default this card setup shows the past 30 days of events and does not dim out past events -- which these all will be. In addition to some other formating options.
+
+* Install [Atomic Calendar Revive](https://github.com/totaldebug/atomic-calendar-revive) via HACS
+* Enable [Remote Calendar](https://www.home-assistant.io/integrations/remote_calendar/) Integration
+  * URL: `http://YOUR.IP.ADDR.ESS/my-quake-shakes.ics` or your path to the ics file on your webserver if it is different
+* Create a card using the `my_quake_shakes_homeassistant_card.yaml` file
+  - [ ] Edit the sensor name to match your Remote Calendar name you created above 
