@@ -56,11 +56,11 @@ And most importantly this allowed a major reduction in data to process with the 
 
 Now the 'fun' thing is through services like [Earthscope/IRIS](https://www.iris.edu/app/station_monitor/) you are able to see what detector stations are close to you AND download the raw waveform data of the sensors.  Which is super cool AND also super not immediately helpful as those wave forms are complete and local magnitudes aren't provided with them. So excellent I can ID what is the closest station to me and I can get the raw data but I still don't know the how much my building shook and what I didn't feel yet. Rats.
 
-## SAIpy - AI Model Tool
+## SAIPy - AI Model Tool
 
-Enter [SAIpy](https://github.com/srivastavaresearchgroup/SAIPy).  This is a very cool [published research project](https://www.sciencedirect.com/science/article/pii/S0098300424001699) that uses AI models to detect earthquakes AND calculate local magnitude from a SINGLE set of sensors.  AND it has built in ability to directly download from IRIS/Earthscope as long as you provide the proper station information. Oh we can do that.
+Enter [SAIPy](https://github.com/srivastavaresearchgroup/SAIPy).  This is a very cool [published research project](https://www.sciencedirect.com/science/article/pii/S0098300424001699) that uses AI models to detect earthquakes AND calculate local magnitude from a SINGLE set of sensors.  AND it has built in ability to directly download from IRIS/Earthscope as long as you provide the proper station information. Oh we can do that.
 
-I tried a few other tools without any luck.  SAIpy ended up working for me. I can't say if it is the best or anything like that as earthquake science is terribly complex but I can say I was able to get it to give me what I wanted. So I approve of it!  If you want some insight into the science of earthquake magnitude calculations [this article on the Pacific Northwest Seismic Network](https://pnsn.org/education/seismology/magnitude-intensity) website was very interesting.
+I tried a few other tools without any luck.  SAIPy ended up working for me. I can't say if it is the best or anything like that as earthquake science is terribly complex but I can say I was able to get it to give me what I wanted. So I approve of it!  If you want some insight into the science of earthquake magnitude calculations [this article on the Pacific Northwest Seismic Network](https://pnsn.org/education/seismology/magnitude-intensity) website was very interesting.
 
 > [!CAUTION]
 > While it is cool to use AI it does use **EVERY AVAIABLE PROCESSOR CORE** and requires ~3 GB of free RAM for every 15 minutes of raw data (default settings).  Which means it will run on slower cpu's it may take a prohibitively long time to run. While RAM is not negotiable but is directly porportional to raw data sample size.
