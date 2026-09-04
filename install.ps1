@@ -31,8 +31,8 @@ uv venv --python 3.11 --seed
 .venv\Scripts\activate
 
 # Update the official setup.py file with the exact packages we need to run on python 3.11 / newer version of pip
-sed -i "s/tensorflow>=2.8.0/tensorflow==2.15.0/g" setup.py
-sed -i 's/+cu113//g' setup.py
+(Get-Content -Path "setup.py") -replace "'tensorflow>=2.8.0',", "'tensorflow==2.15.0'," | Set-Content -Path "setup.py"
+(Get-Content -Path "setup.py") -replace "torch\>=1.12.1\+cu113", "torch>=1.12.1"| Set-Content -Path "setup.py"
 
 # Install SAIPy
 python -m pip install .
