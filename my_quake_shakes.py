@@ -42,7 +42,7 @@ dirmodel = '../saipy/saved_models/'
 ################ - Import for ICS creation
 from icalendar import Calendar, Event
 
-ics_path = "/var/www/my-quake-shakes.ics"
+ics_path = "my-quake-shakes.ics"
 
 ################ - Check / Create the USGS ics Calendar file
 try:
