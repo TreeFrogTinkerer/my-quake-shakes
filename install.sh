@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install uv so we can install a python 3.11 virtual environment for SAIPy 
-sudo apt install uv
+#sudo apt install uv
 
 # Copy the testing source for debian Trixie so we can...
 sudo cp testing.list /etc/apt/sources.list.d
