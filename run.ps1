@@ -32,16 +32,23 @@ Invoke-WebRequest -Uri $usgs_api_url -OutFile usgs_downloaded_data.csv
 #wget $usgs_api_url -O usgs_downloaded_data.csv
 
 # Write a New Run line break to the log file for easier finding of run time blocks
-write-line "----------------------------- New Run -----------------------------" >> "my_quake_shakes.log"
+"----------------------------- New Run -----------------------------" >> "my_quake_shakes.log"
 
 # Cycle through the USGS downloaded events using headers with gawk. For each event pass it to the SAIpy based python script to process the event
 # Each run of python script is one event and closed after wards keeping ram as minimal usage as possible and predictible
 
 $usgs_event_data = Import-Csv -Path "usgs_downloaded_data.csv"
-$usgs_event_data | Format-Table
+#$usgs_event_data | Format-Table
 
 foreach ($event in $usgs_event_data) {
     Write-Host "run python"
+	$start = (Get-Date).ToString("MMMM d HH:mm:ss yyyy")
+	$start + " - Initiated Processing Event: " + $event.id >> "my_quake_shakes.log"
+	
+	uv run python my_quake_shakes.py -d $event.time -m $event.mag -p $event.place -n $event.net -id $event.id
+	
+	$end = (Get-Date).ToString("MMMM d HH:mm:ss yyyy")
+	$end + " - Finshed Processing Event: " + $event.id >> "my_quake_shakes.log"
 
 }
 <#
