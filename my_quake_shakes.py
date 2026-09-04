@@ -42,7 +42,7 @@ dirmodel = '../saipy/saved_models/'
 ################ - Import for ICS creation
 from icalendar import Calendar, Event
 
-ics_path = "my-quake-shakes.ics"
+ics_path = "./my-quake-shakes.ics"
 
 ################ - Check / Create the USGS ics Calendar file
 try:
@@ -122,6 +122,8 @@ for station in stations:
             try:
                 print(f"Attempt {attempt + 1} of {max_attempts}...")
                 stream = waveform_download(wsp=wsp_word, net=network_word, sta=station_word, loc=location_word, chan=channel_word, starttime=start_time_send, endtime=end_time_send)
+                with open("my_quake_shakes.log", "a") as file:
+                    file.write(f"SUCCESS: Downloaded {station['station']} sensor data for event.\n")
                 break  # Success! Exit the loop.
             except BaseException as e:
                 print(f"Failed due to: {e}")
@@ -130,7 +132,7 @@ for station in stations:
         else:
             # Write to log file if all 3 attempts fail
             with open("my_quake_shakes.log", "a") as file:
-                file.write("FAILED: All attempts at downloading sensor data  for event FAILED. Event UNPROCCESSED.\n")
+                file.write(f"FAILED: All attempts at downloading {station['station']} sensor data for event FAILED. Event UNPROCCESSED.\n")
             print("All attempts failed.")
 
         # Filter bp 1-45 Hz and resampling (100 Hz, if necessary)
