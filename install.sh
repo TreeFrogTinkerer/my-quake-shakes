@@ -20,6 +20,7 @@ cp stations-template.csv ./SAIPy/stations.csv
 cp home_range-template.csv ./SAIPy/home_range.csv
 mv my_quake_shakes.py ./SAIPy
 mv run_dates.csv ./SAIPy
+mv hooks.json ./SAIPy
 
 # Make the run.sh executible
 chmod +x ./SAIPy/run.sh
