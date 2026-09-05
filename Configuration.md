@@ -143,3 +143,59 @@ By default this card setup shows the past 30 days of events and does not dim out
   * URL: `http://YOUR.IP.ADDR.ESS/my-quake-shakes.ics` or your path to the ics file on your webserver if it is different
 * Create a card using the `my_quake_shakes_homeassistant_card.yaml` file
   - [ ] Edit the sensor name to match your Remote Calendar name you created above 
+
+# Advanced Configuration Options
+
+> [!IMPORTANT]
+> These options are more like idea guidelines than officially supported or completely documented features.  They are features I am using but are not part of the core My Quake Shake program.
+
+## FTP ics File
+
+At the end of the `run.sh` file there is a curl command that will upload the ics file to a ftp server of your choice.  To use you will need a working FTP server & curl installed (`sudo apt install curl`).  Then uncomment the curl line below in `run.sh`. And add your ip address, username, and password:
+
+```
+# FTP to Home Assistant
+# Enable FTP server and a user with access to the the config share
+curl -T my-quake-shakes.ics ftp://HA.IP.ADD.RESS/config/www/ --user username:password
+```
+
+I use this because I am serving the ics file using the Home Assistant built in web server and because the machine that runs My Quake Shakes goes to sleep in between runs and Home Assistant likes the ics to be always available for the 'Remote Calendar' plugin.
+
+That brings us to ....
+
+## Suspend My Quake Shakes Host After Running My Quake Shakes
+
+At the end of the `run.sh` file there is a command to put the host to sleep when the script is done running. This is for systemd enabled hosts AND yu have to enable passwordless use of the systemctl suspend command. That is beyond the scope of this project.
+
+To enable uncommend the `systemctl suspend` line at the end of `run.sh` as well as the `sleep 30s` line so it gives a small pause before sending the sleep command:
+
+```
+# Puts computer to sleep once the script has run - systemd hosts
+sleep 30s
+systemctl suspend
+```
+
+I have my Home Assistant server set to run a Wake On Lan command every 24 hours to the host machine of the Mhy Quake Shakes service.  So after it sleeps it will be woken up once a day to run.
+
+## API Run My Quake Shakes
+
+This is the last piece of the energy saving sleep when not in use of the My Quake Shakes host machine.  After it has been woken up via WOL magic packet  I used [webhook](https://github.com/adnanh/webhook) to create a simple API that triggers the `run.sh` script on demand.  I use Home Assistant to send Wake on Lan, Wait 5 Minutes, then trigger the API to run the script.  The My Quake Shakes script then runs, uploads the ics file to the Home Assistant Server via FTP, and then goes back to sleep.
+
+> [!IMPORTANT]
+> THIS IS AN ADVANCED FEATURE. It takes more familiarity with linux and editing config files, and using systemd services to implement. Not ever commmand is documented here. Only the general idea and core files are documented.
+
+### Step 1 - Edit `.\my-quake-shakes\SAIPy\hooks.json` File
+
+Included in this repo are the `hooks.json` file which contains the core commands for the API endpoint to run.  You will need to edit this file to the correct path where My Quake Shakes is installed. If you installed it into your home directory then likely you will just need to put in your username in the placeholder.  But that may not be true.  The `hooks.json` file stays in the same location as you installed My Quake Shakes files (in the SAIPy folder).
+
+### Step 2 - Enabled webhook Service
+
+You will need to edit the `webhook.service` file with the correct path to your `hooks.json`file and user to run the command under. Then copy it to the correct location for systemd services, enable it, and start it. Once started and running if everything is working you can trigger the `run.sh` script via the following url:
+
+`http://YOUR.IP.ADD.RESS:9000/hooks/run-my-quake-shakes`
+
+OR
+
+`http://HOSTNAME:9000/hooks/run-my-quake-shakes`
+
+
