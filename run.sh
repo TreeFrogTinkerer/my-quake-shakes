@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Read Last Run CSV and process dates to download in this run
-csv_last_date=$(awk -F, 'END {print $2}' run_dates.csv)
+csv_last_date=$(awk -F, 'END {print $2}' ./config/run_dates.csv)
 usgs_start_date=$(date -d "$csv_last_date + 1 days" +%F)
 usgs_stop_date=$(date -d "yesterday" +%F)
 today=$(date +%F)
@@ -58,7 +58,7 @@ gawk --csv '
 ' usgs_downloaded_data.csv
 
 # Update the last run csv file to allow next run to be only new data since last run
-echo $today","$usgs_stop_date >> run_dates.csv
+echo $today","$usgs_stop_date >> ./config/run_dates.csv
 
 # Run custom action script at the end of this script
 ./config/custom-actions.sh
