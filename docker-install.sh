@@ -12,6 +12,8 @@ apt install -y -t testing gawk
 # Clone the SAIPy project
 git clone https://github.com/srivastavaresearchgroup/SAIPy.git
 
+mkdir ./SAIPy/config
+
 # Move My Quake Shakes project files into th SAIPy folder 
 # Copy and name correctly the template based csvs into the SAIPy folder
 # Could likely make this not needed but this is how it was built and isn't much of an issue at the moment so not putting time into changing it
@@ -21,12 +23,13 @@ cp home_range-template.csv ./SAIPy/home_range.csv
 mv my_quake_shakes.py ./SAIPy
 mv run_dates.csv ./SAIPy
 mv wrapper-my-quake-shakes.sh ./SAIPy
-mv custom-actions.sh ./SAIPy
+mv custom-actions.sh ./SAIPy/config
+
 
 # Make the run.sh executible
 chmod +x ./SAIPy/run.sh
 chmod +x ./SAIPy/wrapper-my-quake-shakes.sh
-chmod +x ./SAIPy/custom-actions.sh
+chmod +x ./SAIPy/config/custom-actions.sh
 
 # Change directories into the SAIPy location
 cd SAIPy
