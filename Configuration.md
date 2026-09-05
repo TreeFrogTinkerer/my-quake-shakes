@@ -128,11 +128,11 @@ There are two columns:
 
 That is everything.  Assuming all as been setup correctly you can manually give it a test run by:
 
-`./run.sh``
+`./run.sh`
 
 ## Output location
 
-The final `my_quake_shakes.ics` file is written to /var/www as it is was built for Home Assistant use and it needs to be served by a web server.
+The final `my_quake_shakes.ics` file is written to the same folder it is run in.
 
 # Home Assistant Integration
 
