@@ -7,6 +7,9 @@
   - [ ] Add suspend command option
   - [ ] Document non-API kick off
   - [ ] Windows on demand only
+- [ ] Add Docker Support
+  - [ ] Build Docker Image
+  - [ ] Build compose.yml
 
 # My Quake Shakes Introduction
 
