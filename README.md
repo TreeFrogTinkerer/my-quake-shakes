@@ -1,3 +1,13 @@
+# To Do Before Next Release to Main
+- [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
+- [ ] Consider that if the script is interupted events will be written but it will run again as the final date isn't written until the end
+- [ ] Add Windows Support
+  - [ ] Files are written but received a child process error when running
+  - [ ] Add FTP command to run.ps1
+  - [ ] Add suspend command option
+  - [ ] Document non-API kick off
+  - [ ] Windows on demand only
+
 # My Quake Shakes Introduction
 
 The Earth is ALWAYS moving even if we as humans don't notice it - most of the time.  In general the movement we notice are bigger earthquakes anything from a small rattle in the building to much more destructive events. 
@@ -103,7 +113,7 @@ The setup for the Home Assistant card / view I am using is also included!
 
 ### Step 1: Clone repository
 
-`git clone https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
+`git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
 
 ### Step 2: Make `install.sh` Executable
 
