@@ -18,10 +18,10 @@ mkdir ./SAIPy/config
 # Copy and name correctly the template based csvs into the SAIPy folder
 # Could likely make this not needed but this is how it was built and isn't much of an issue at the moment so not putting time into changing it
 mv run.sh ./SAIPy
-cp stations-template.csv ./SAIPy/stations.csv
-cp home_range-template.csv ./SAIPy/home_range.csv
+cp stations-template.csv ./SAIPy/config/stations.csv
+cp home_range-template.csv ./SAIPy/config/home_range.csv
 mv my_quake_shakes.py ./SAIPy
-mv run_dates.csv ./SAIPy
+mv run_dates.csv ./SAIPy/config
 mv wrapper-my-quake-shakes.sh ./SAIPy
 mv custom-actions.sh ./SAIPy/config
 
