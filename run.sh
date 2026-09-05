@@ -61,7 +61,7 @@ gawk --csv '
 echo $today","$usgs_stop_date >> run_dates.csv
 
 # Run custom action script at the end of this script
-./custom-actions.sh
+./config/custom-actions.sh
 
 # Puts computer to sleep once the script has run - systemd hosts
 # sleep 30s
