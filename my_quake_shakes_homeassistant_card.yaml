@@ -1,0 +1,22 @@
+maxDaysToShow: 30
+showMonth: true
+showCurrentEventLine: true
+startDaysAhead: -30
+showEndTime: false
+dimFinishedEvents: false
+showProgressBar: false
+enableModeChange: true
+eventDateFormat: ddd D MMM YYYY
+showDescription: true
+showAllDayHours: false
+plannerDaysToShow: 31
+tap_action:
+  action: none
+type: custom:atomic-calendar-revive
+entities:
+  - entity: calendar.my_quake_shakes
+hoursOnSameLine: false
+grid_options:
+  columns: full
+compactMode: false
+calShowDescription: true

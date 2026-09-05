@@ -1,0 +1,14 @@
+[
+  {
+    "id": "run-my-quake-shakes",
+    "execute-command": "/home/USERNAME/my-quake-shakes/SAIPy/run.sh",
+    "command-working-directory": "/USERNAME/chris/my-quake-shakes/SAIPy",
+    "response-message": "Script triggered successfully!",
+    "pass-arguments-to-command": [
+      {
+        "source": "url",
+        "name": "name"
+      }
+    ]
+  }
+]
