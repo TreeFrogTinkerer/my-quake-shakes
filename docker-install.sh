@@ -7,7 +7,7 @@ cp testing.list /etc/apt/sources.list.d
 
 # ... Install gawk 5.3 -- with built in csv support
 apt update
-apt install -t testing gawk
+apt install -y -t testing gawk
 
 # Clone the SAIPy project
 git clone https://github.com/srivastavaresearchgroup/SAIPy.git
