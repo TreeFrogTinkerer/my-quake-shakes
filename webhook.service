@@ -1,0 +1,14 @@
+[Unit]
+Description=Webhook API for Bash Scripts
+After=network.target
+
+[Service]
+Type=simple
+User=USERNAME
+WorkingDirectory=/home/USERNAME/my-quake-shakes/SAIPy
+ExecStart=/usr/bin/webhook -hooks /home/USERNAME/my-quake-shakes/SAIPy/hooks.json -port 9000 -verbose
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
