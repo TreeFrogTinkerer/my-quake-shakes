@@ -103,7 +103,7 @@ The setup for the Home Assistant card / view I am using is also included!
 
 ### Step 1: Clone repository
 
-`git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
+`git clone https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
 
 ### Step 2: Make `install.sh` Executable
 
