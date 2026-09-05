@@ -16,16 +16,18 @@ git clone https://github.com/srivastavaresearchgroup/SAIPy.git
 # Copy and name correctly the template based csvs into the SAIPy folder
 # Could likely make this not needed but this is how it was built and isn't much of an issue at the moment so not putting time into changing it
 mv run.sh ./SAIPy
-cp stations-template.csv ./SAIPy/stations.csv
-cp home_range-template.csv ./SAIPy/home_range.csv
-mv my_quake_shakes.py ./SAIPy
-mv run_dates.csv ./SAIPy
-mv hooks.json ./SAIPy
 mv custom-actions.sh ./SAIPy
+cp stations-template.csv ./SAIPy/config/stations.csv
+cp home_range-template.csv ./SAIPy/config/home_range.csv
+mv my_quake_shakes.py ./SAIPy
+mv run_dates.csv ./SAIPy/config
+mv hooks.json ./SAIPy
+mv custom-actions.sh ./SAIPy/config
+
 
 # Make the run.sh executible
 chmod +x ./SAIPy/run.sh
-chmod +x ./SAIPy/custom-actions.sh
+chmod +x ./SAIPy/config/custom-actions.sh
 
 # Change directories into the SAIPy location
 cd SAIPy
