@@ -157,5 +157,5 @@ You can run it using the sample csv files as well if if you like though I'd high
 
 The output will be in
 
-`/var/www/my-quake-shakes.ics`
+`./my-quake-shakes.ics`
 
