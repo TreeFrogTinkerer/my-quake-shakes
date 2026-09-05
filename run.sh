@@ -7,9 +7,9 @@ usgs_stop_date=$(date -d "yesterday" +%F)
 today=$(date +%F)
 
 # Read home_range.csv to get location and radius to download USGS events
-home_lat=$(awk -F',' 'NR > 1 { print $1}' home_range.csv)
-home_long=$(awk -F',' 'NR > 1 { print $2}' home_range.csv)
-home_radius=$(awk -F',' 'NR > 1 { print $3}' home_range.csv)
+home_lat=$(awk -F',' 'NR > 1 { print $1}' ./config/home_range.csv)
+home_long=$(awk -F',' 'NR > 1 { print $2}' ./config/home_range.csv)
+home_radius=$(awk -F',' 'NR > 1 { print $3}' ./config/home_range.csv)
 
 # Download USGS events using the above settings
 usgs_api_url="https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=${usgs_start_date}&endtime=${usgs_stop_date}&latitude=${home_lat}&longitude=${home_long}&maxradiuskm=${home_radius}"
