@@ -101,7 +101,7 @@ dw = 5
 output_path = '../results/results_IRIS_v2'        
 
 # For each location station to process from CSV
-with open('stations.csv', mode='r', newline='', encoding='utf-8') as file:
+with open('./config/stations.csv', mode='r', newline='', encoding='utf-8') as file:
     stations = list(csv.DictReader(file))
 
 for station in stations:
