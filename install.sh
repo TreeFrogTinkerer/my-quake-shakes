@@ -21,9 +21,11 @@ cp home_range-template.csv ./SAIPy/home_range.csv
 mv my_quake_shakes.py ./SAIPy
 mv run_dates.csv ./SAIPy
 mv hooks.json ./SAIPy
+mv custom-actions.sh ./SAIPy
 
 # Make the run.sh executible
 chmod +x ./SAIPy/run.sh
+chmod +x ./SAIPy/custom-actions.sh
 
 # Change directories into the SAIPy location
 cd SAIPy
