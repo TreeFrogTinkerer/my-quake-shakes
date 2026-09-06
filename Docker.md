@@ -20,6 +20,8 @@ docker build -t my-quake-shakes .
 
 This should process the `dockerfile` and build the `my-quake-shakes` docker image which we will use in the `compose.yml` file
 
+# Configure Docker Compose File and My Quake Shake Settings
+
 ## Step 3: Create & Edit compose.yml File
 
 Using `nano compose.yml` copy and past the following into it
@@ -65,10 +67,16 @@ By default the container writes the ics file to its internal memory. Due to path
 
 Edit it with your FTP information and/or add another command to move the my-quake-shakes.ics file out of the docker container.
 
+# Start the My Quake Shakes Container
+
 ## Step 6: Start the Docker Container
 
 `docker compose up -d`
 
-# 
+# Enjoy
+
+Wait for it to run and finish which may take a while depending on your hardware.
+
+Then view the ics file to see what you've discovered about your choosen location!
 
 
