@@ -7,7 +7,7 @@ To use the docker setup you must be slightly comfortable using docker from the c
 
 # Build the Docker Image
 
-## Step 1: Clone repository
+## Step 1: Clone Repository
 
 `git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
 
