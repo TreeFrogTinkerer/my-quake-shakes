@@ -9,4 +9,4 @@ WORKDIR ./my-quake-shakes/
 RUN chmod +x docker-install.sh
 RUN ./docker-install.sh
 WORKDIR ./SAIPy
-CMD ["./wrapper-my-quake-shakes.sh"]
+CMD ["./run.sh"]

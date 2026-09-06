@@ -17,18 +17,18 @@ mkdir ./SAIPy/config
 # Move My Quake Shakes project files into th SAIPy folder 
 # Copy and name correctly the template based csvs into the SAIPy folder
 # Could likely make this not needed but this is how it was built and isn't much of an issue at the moment so not putting time into changing it
-mv run.sh ./SAIPy
+mv run-mqs.sh ./SAIPy
 cp stations-template.csv ./SAIPy/config/stations.csv
 cp home_range-template.csv ./SAIPy/config/home_range.csv
 mv my_quake_shakes.py ./SAIPy
 mv run_dates.csv ./SAIPy/config
-mv wrapper-my-quake-shakes.sh ./SAIPy
+mv run.sh ./SAIPy
 mv custom-actions.sh ./SAIPy/config
 
 
 # Make the run.sh executible
+chmod +x ./SAIPy/run-mqs.sh
 chmod +x ./SAIPy/run.sh
-chmod +x ./SAIPy/wrapper-my-quake-shakes.sh
 chmod +x ./SAIPy/config/custom-actions.sh
 
 # Change directories into the SAIPy location
