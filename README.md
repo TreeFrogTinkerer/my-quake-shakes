@@ -132,4 +132,10 @@ Both setups have the same hardware requirements:
   * Docker is CPU only
   * Bare Metal in theory can be made to work with NVIDIA CUDA GPU acceleration
 
+# Icon and "Logo" Image Credits
+
+Logo is only used in regards to Home Assistant icon display. It is not the official logo of My Quake Shakes
+
+	[Earthquake icons created by Magnific - Flaticon](https://www.flaticon.com/packs/earthquake-8)
+
 
