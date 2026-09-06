@@ -67,6 +67,9 @@ mkdir -p ./my-quake-shake-volumes/config/
 `cp ./config/* ./my-quake-shake-volumes/config/
 ```
 
+> [!NOTE]
+> If you use a Docker Volume instead of the host OS filesytem you will need to manuall copy the files in `./config` to the volume and set the `custom-actions.sh` as exectable manually
+
 ## Step 5: Edit Configuration Files
 
 Go through the same steps on the [Configuration Page](Configuration.md) except edit the files in the `./my-quake-shakes/config` folder instead of the standard `./config/` folder
