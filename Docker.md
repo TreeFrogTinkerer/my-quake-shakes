@@ -40,6 +40,16 @@ services:
     restart: unless-stopped
 ```
 
+Alternatively, you can mount to a docker volume rather than the underlying OS
+
+```
+   volumes:
+        - my-quake-shakes-config:/my-quake-shakes/SAIPy/config
+...
+volumes:
+   my-quake-shakes-config:
+```  
+
 You can edit the volume path to another location if you like but the following command will have to be edited.
 
 > [!NOTE]
