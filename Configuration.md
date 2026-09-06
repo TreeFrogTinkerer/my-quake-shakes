@@ -2,6 +2,9 @@
 
 Once installed you need to set some configurations for you to get usable data.  This is almost entirely done via CSV files in the repository along with a big of research on Earthscope/IRIS & Google.
 
+> [!IMPORTANT]
+> All configuration files are located in the `./my-quake-shakes/SAIPy/config` folder
+
 # Home Range
 
 The `home_range.csv` file is where set the center of your search for earthquake events and the radius around it to search.  My Quake Shakes ship with Mt St Helens as the location to test with.
@@ -149,9 +152,15 @@ By default this card setup shows the past 30 days of events and does not dim out
 > [!IMPORTANT]
 > These options are more like idea guidelines than officially supported or completely documented features.  They are features I am using but are not part of the core My Quake Shake program.
 
+## Custom actions
+
+In the `./my-quake-shakes/SAIPy/config` folder there is a bash script called `custom-actions.sh`.  This script runs at the end of the `run.sh` script.  You can add any actions you'd like to run after the My Quake Shakes core script runs.  
+
+One example is ...
+
 ## FTP ics File
 
-At the end of the `run.sh` file there is a curl command that will upload the ics file to a ftp server of your choice.  To use you will need a working FTP server & curl installed (`sudo apt install curl`).  Then uncomment the curl line below in `run.sh`. And add your ip address, username, and password:
+In the `custom-actions.sh` file there is a curl command that will upload the ics file to a ftp server of your choice.  To use you will need a working FTP server & curl installed (`sudo apt install curl`).  Then uncomment the curl line below in `custom-actions.sh`. And add your ip address, username, and password:
 
 ```
 # FTP to Home Assistant
