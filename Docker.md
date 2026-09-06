@@ -29,8 +29,8 @@ Using `nano compose.yml` copy and past the following into it
 ```
 services:
   my-quake-shakes:
-    image: my-quake-shakes:latest
-    container_name: treefromtinkerer/my-quake-shakes:latest
+    image: treefrogtinkerer/my-quake-shakes:latest
+    container_name: my-quake-shakes
     volumes:  
       - ./my-quake-shake-volumes/config:/my-quake-shakes/SAIPy/config
     deploy:
