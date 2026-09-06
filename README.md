@@ -116,7 +116,7 @@ Both setups have the same hardware requirements:
     * Faster the CPU the better it will run
 - [ ] Clock and Time Zone set correctly on the host
 
-## Bare Metail Additional Required Pre-Requisites
+## Bare Metal Additional Required Pre-Requisites
 - [ ] Debian Trixie based OS on bare metal
 - [ ] python installed
   * Any version 
