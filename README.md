@@ -130,5 +130,6 @@ Both setups have the same hardware requirements:
   * If you plan to use Home Assistant this is mandatory
 * GPU NVIDIA CUDA acceleration is available in pytorch but it is untested in this configuration
   * Docker is CPU only
+  * Bare Metal in theory can be made to work with NVIDIA CUDA GPU acceleration
 
 
