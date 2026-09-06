@@ -10,6 +10,5 @@ map:
   - type: homeassistant_config
     read_only: False
     path: /my-quake-shakes/SAIPy/ha-config
-  - type: addon_config
-    read_only: False
-    path: /my-quake-shakes/SAIPy/config
+stage: experimental
+panel_icon: mdi:vibrate
