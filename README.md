@@ -87,12 +87,23 @@ When run it will...
   
 # Bonus Doing
 
-The setup for the Home Assistant card / view I am using is also included!
+* The setup for the Home Assistant card / view I am using is also included!
+* API Run on demand information
+* Suspend host at the end of the script running
+* Custom actions script that runs at the end
+  * FTP ics file to a server vis custom-actions.sh script
 
 # Installation
 
-## Required Pre-Requisites
-- [ ] Debian Trixie based OS on bare metal
+There are 2 methods to running My Quake Shakes.  
+
+1) [Docker](Docker.md) -- See the Docker.md page for details on this setup
+2) Bare metal install
+
+Both setups have the same hardware requirements:
+
+## Hardware Requirements
+
 - [ ] At least 4GB of FREE RAM (not total system RAM)
   * If you do not have enough RAM the SAIpy process will fail
   * You need ~3GB of RAM per 15 minute raw data length
@@ -100,19 +111,25 @@ The setup for the Home Assistant card / view I am using is also included!
 - [ ] Moderately fast/modern x86_64 CPU
   * This was built and tested on a AMD Ryzen Embedded V1605B CPU (4 cores/8 threads/mobile)
     * So by no means bleeding edge
-  * It pegs all 8 CPU threads of the above processor while running
-  * Each 15 minute station sample takes about 1-2 minutes to run
-  * Faster the CPU the better it will run
-  * GPU NVIDIA CUDA acceleration is available in pytorch but it is untested in this configuration
+    * It pegs all 8 CPU threads of the above processor while running
+    * Each 15 minute station sample takes about 1-2 minutes to run
+    * Faster the CPU the better it will run
+- [ ] Clock and Time Zone set correctly on the host
+
+## Bare Metail Additional Required Pre-Requisites
+- [ ] Debian Trixie based OS on bare metal
 - [ ] python installed
-  * Any version the correct 3.11 will be installed in a virtual environment
+  * Any version 
+  * The needed 3.11 will be installed in a virtual environment
 - [ ] [uv](https://docs.astral.sh/uv/) installed
 - [ ] git installed
-- [ ] Clock and Time Zone set correctly on the host
+
 
 ## Optional Pre-Requisites
 * Web server
   * If you plan to use Home Assistant this is mandatory
+* GPU NVIDIA CUDA acceleration is available in pytorch but it is untested in this configuration
+  * Docker is CPU only
 
 ### Step 1: Clone repository
 
