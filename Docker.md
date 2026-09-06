@@ -30,7 +30,7 @@ Using `nano compose.yml` copy and past the following into it
 services:
   my-quake-shakes:
     image: my-quake-shakes:latest
-    container_name: my-quake-shakes
+    container_name: treefromtinkerer/my-quake-shakes:latest
     volumes:  
       - ./my-quake-shake-volumes/config:/my-quake-shakes/SAIPy/config
     deploy:
@@ -68,11 +68,14 @@ mkdir -p ./my-quake-shake-volumes/config/
 ```
 
 > [!NOTE]
-> If you use a Docker Volume instead of the host OS filesytem you will need to manuall copy the files in `./config` to the volume and set the `custom-actions.sh` as exectable manually
+> If you use a Docker Volume instead of the host OS filesytem you will shouldn't need to manually copy the files in `./config` to the volume. However, if things arent working as expected check the volume contents and confirm the files are there and that the `custom-actions.sh` is set to exectable.
 
 ## Step 5: Edit Configuration Files
 
 Go through the same steps on the [Configuration Page](Configuration.md) except edit the files in the `./my-quake-shakes/config` folder instead of the standard `./config/` folder
+
+> [!NOTE]
+> If you use a Docker Volume instead of the host OS filesytem you will need to edit the files in the volume directly
 
 You can run it using the sample csv files as well if if you like though I'd highly recommend you change the date in `run_dates.csv` so you don't process a few years worth of quakes on the first go.
 
