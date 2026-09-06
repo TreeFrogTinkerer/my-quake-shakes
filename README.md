@@ -136,6 +136,6 @@ Both setups have the same hardware requirements:
 
 Logo is only used in regards to Home Assistant icon display. It is not the official logo of My Quake Shakes
 
-	[Earthquake icons created by Magnific - Flaticon](https://www.flaticon.com/packs/earthquake-8)
+[Earthquake icons created by Magnific - Flaticon](https://www.flaticon.com/packs/earthquake-8)
 
 
