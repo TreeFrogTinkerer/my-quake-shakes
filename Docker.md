@@ -61,6 +61,8 @@ mkdir -p ./my-quake-shake-volumes/config/
 
 Go through the same steps on the [Configuration Page](Configuration.md) except edit the files in the `./my-quake-shakes/config` folder instead of the standard `./config/` folder
 
+You can run it using the sample csv files as well if if you like though I'd highly recommend you change the date in `run_dates.csv` so you don't process a few years worth of quakes on the first go.
+
 ### Edit `custom-actions.sh`
 
 By default the container writes the ics file to its internal memory. Due to pathing issues I didn't move it to the config folder. Instead the primary way of getting the file out is to use the FTP server option located in the `custom-actions.sh` shell script.
