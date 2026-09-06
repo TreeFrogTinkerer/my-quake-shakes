@@ -18,7 +18,7 @@ cd my-quake-shakes
 docker build -t my-quake-shakes .
 ```
 
-This should process the `dockerfile` and build the `my-quake-shakes` docker image which we will use in the `compose.yml` file
+This should process the `Dockerfile` and build the `my-quake-shakes` docker image which we will use in the `compose.yml` file
 
 # Configure Docker Compose File and My Quake Shake Settings
 
