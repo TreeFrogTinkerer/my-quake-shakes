@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# If running as Home Assistant App copy the file from the live install to get the current ics in case docker container is restarted
+if [ -e "./ha-config/www/my-quake-shakes.ics" ]; then
+    cp ./ha-config/www/my-quake-shakes.ics ./my-quake-shakes.ics
+fi
+
 # Read Last Run CSV and process dates to download in this run
 csv_last_date=$(awk -F, 'END {print $2}' ./config/run_dates.csv)
 usgs_start_date=$(date -d "$csv_last_date + 1 days" +%F)
@@ -60,9 +65,10 @@ gawk --csv '
 # Update the last run csv file to allow next run to be only new data since last run
 echo $today","$usgs_stop_date >> ./config/run_dates.csv
 
+# Copy file to Home Assistant location when run as an app
+if [ -e "./ha-config/www" ]; then
+    cp ./my-quake-shakes.ics ./ha-config/www
+fi
+
 # Run custom action script at the end of this script
 ./config/custom-actions.sh
-
-# Puts computer to sleep once the script has run - systemd hosts
-# sleep 30s
-# systemctl suspend

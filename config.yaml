@@ -1,0 +1,15 @@
+name: "My Quake Shakes"
+description: "Calculate magnitude at a seismic station closer to a location than the epicenter"
+version: "0.2.0"
+slug: "my_quake_shakes"
+init: false
+arch:
+  - amd64
+url: "https://github.com/TreeFrogTinkerer/my-quake-shakes"
+map:
+  - type: homeassistant_config
+    read_only: False
+    path: /my-quake-shakes/SAIPy/ha-config
+  - type: addon_config
+    read_only: False
+    path: /my-quake-shakes/SAIPy/config
