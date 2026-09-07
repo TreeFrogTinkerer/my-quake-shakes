@@ -39,6 +39,7 @@ services:
     container_name: my-quake-shakes
     volumes:  
       - ./my-quake-shake-volumes/config:/my-quake-shakes/SAIPy/config
+      - ./my-quake-shake-volumes/ics-output:/ha-config/www
     deploy:
       resources:
         limits:
@@ -85,11 +86,9 @@ Go through the same steps on the [Configuration Page](Configuration.md) except e
 
 You can run it using the sample csv files as well if if you like though I'd highly recommend you change the date in `run_dates.csv` so you don't process a few years worth of quakes on the first go.
 
-### Edit `custom-actions.sh`
+### Optional: Edit `custom-actions.sh`
 
-By default the container writes the ics file to its internal memory. Due to pathing issues I didn't move it to the config folder. Instead the primary way of getting the file out is to use the FTP server option located in the `custom-actions.sh` shell script.
-
-Edit it with your FTP information and/or add another command to move the my-quake-shakes.ics file out of the docker container.
+Add any actions you want run afterwards. The example is an FTP upload command.
 
 # Start the My Quake Shakes Container
 
@@ -101,6 +100,10 @@ Edit it with your FTP information and/or add another command to move the my-quak
 
 Wait for it to run and finish which may take a while depending on your hardware.
 
-Then view the ics file to see what you've discovered about your choosen location!
+## View ics File
+
+The output ics file is written to the host os `./my-quake-shake-volumes/ics-output`.
+
+Review the ics file to see what you've discovered about your choosen location!
 
 
