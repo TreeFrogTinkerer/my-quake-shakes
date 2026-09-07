@@ -11,7 +11,7 @@ By default a dockerhub image will be used.  However, if you would like to edit a
 
 ## Step 0A: Clone Repository
 
-`git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
+`git clone  https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
 
 ## Step 0B: Make your Edits
 
