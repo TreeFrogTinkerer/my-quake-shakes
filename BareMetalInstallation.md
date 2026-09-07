@@ -26,7 +26,7 @@ You can run it using the sample csv files as well if if you like though I'd high
 
 # Running My Quake Shakes
 
-`./run.sh`
+`./run-mqs.sh`
 
 The output will be in
 
