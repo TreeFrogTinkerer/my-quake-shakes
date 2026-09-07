@@ -12,6 +12,8 @@ sudo apt install -t testing gawk
 # Clone the SAIPy project
 git clone https://github.com/srivastavaresearchgroup/SAIPy.git
 
+mkdir ./SAIPy/config
+
 # Move My Quake Shakes project files into th SAIPy folder 
 # Copy and name correctly the template based csvs into the SAIPy folder
 # Could likely make this not needed but this is how it was built and isn't much of an issue at the moment so not putting time into changing it
