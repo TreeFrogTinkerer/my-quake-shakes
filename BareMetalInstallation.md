@@ -28,6 +28,9 @@ You can run it using the sample csv files as well if if you like though I'd high
 
 `./run-mqs.sh`
 
+> [!TIP]
+>  By default SAIPy appears to be setup to display the matlabplots automatically and will wait for you to close them before proceeding.  If you are running it via SSH disable X11 forarding and My Quake Shakes will run without the pause on the pop-ups.
+
 The output will be in
 
 `./my-quake-shakes.ics`
