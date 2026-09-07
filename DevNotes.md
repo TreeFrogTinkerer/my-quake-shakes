@@ -144,7 +144,7 @@ Then hit run and it should be off and running.
 ### Step 8 - Backup Notes
 
 > [!NOTE]
-> SAIPy is a HUGE install so the docker image ends up between 8 & 9 *GBs*.
+> SAIPy is a HUGE install so the docker image ends up between 8 & 9 **GBs**!
 
 Therfore, it is likely a good idea to exclude this from your Home Assistant Backups if you want to conserve space, cost, or time on your backups.
 
