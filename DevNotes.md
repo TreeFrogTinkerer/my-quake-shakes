@@ -96,7 +96,7 @@ To make this work you will need to
 
 Clone the existing repository:
 
-`git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes`
+`git clone  https://github.com/TreeFrogTinkerer/my-quake-shakes`
 
 ### Step 2: Edit Standard Configuration Files
 
