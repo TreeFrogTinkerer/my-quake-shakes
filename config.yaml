@@ -9,6 +9,6 @@ url: "https://github.com/TreeFrogTinkerer/my-quake-shakes"
 map:
   - type: homeassistant_config
     read_only: False
-    path: /my-quake-shakes/SAIPy/ha-config
+    path: /ha-config
 stage: experimental
 panel_icon: mdi:vibrate

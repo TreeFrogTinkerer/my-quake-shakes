@@ -13,7 +13,7 @@ apt install -y -t testing gawk
 git clone https://github.com/srivastavaresearchgroup/SAIPy.git
 
 mkdir ./SAIPy/config
-mkdir ./SAIPy/ha-config
+mkdir /ha-config
 
 # Move My Quake Shakes project files into th SAIPy folder 
 # Copy and name correctly the template based csvs into the SAIPy folder

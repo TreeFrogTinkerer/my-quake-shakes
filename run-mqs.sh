@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # If running as Home Assistant App copy the file from the live install to get the current ics in case docker container is restarted
-if [ -e "./ha-config/www/my-quake-shakes.ics" ]; then
-    cp ./ha-config/www/my-quake-shakes.ics ./my-quake-shakes.ics
+if [ -e "/ha-config/www/my-quake-shakes.ics" ]; then
+    cp /ha-config/www/my-quake-shakes.ics ./my-quake-shakes.ics
 fi
 
 # Read Last Run CSV and process dates to download in this run
@@ -66,8 +66,8 @@ gawk --csv '
 echo $today","$usgs_stop_date >> ./config/run_dates.csv
 
 # Copy file to Home Assistant location when run as an app
-if [ -e "./ha-config/www" ]; then
-    cp ./my-quake-shakes.ics ./ha-config/www
+if [ -e "/ha-config/www" ]; then
+    cp ./my-quake-shakes.ics /ha-config/www
 fi
 
 # Run custom action script at the end of this script
