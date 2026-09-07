@@ -1,6 +1,6 @@
 # Docker, Docker, Docker
 
-To use the docker setup you must be slightly comfortable using docker from the command line.  You will need to edit a few files, build the image, and start the container.  There is no reason someone couldn't build the image and upload it to dockerhub either. It just hasn't been done at this time.
+To use the docker setup you must be slightly comfortable using docker from the command line.  You will need to edit a few files, edit the compose.yml file, and start the container. 
 
 > [!NOTE]
 > The docker image is set to update the earthquake data / ics file every 2 days.  So every 48 hours from the time you start the docker container and it finishes the script it will wait 48 hours and run again.
@@ -71,7 +71,7 @@ Docker will not copy the files from the container to the local disk. So we will 
 
 ```
 mkdir -p ./my-quake-shake-volumes/config/
-`cp ./config/* ./my-quake-shake-volumes/config/
+cp ./config/* ./my-quake-shake-volumes/config/
 ```
 
 > [!NOTE]
@@ -79,7 +79,7 @@ mkdir -p ./my-quake-shake-volumes/config/
 
 ## Step 3: Edit Configuration Files
 
-Go through the same steps on the [Configuration Page](Configuration.md) except edit the files in the `./my-quake-shakes/config` folder instead of the standard `./config/` folder
+Go through the same steps on the [Configuration Page](Configuration.md) except edit the files in the `./my-quake-shakes-volumes/config` folder instead of the standard `./config/` folder
 
 > [!NOTE]
 > If you use a Docker Volume instead of the host OS filesytem you will need to edit the files in the volume directly
