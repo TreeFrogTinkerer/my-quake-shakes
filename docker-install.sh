@@ -3,30 +3,33 @@
 #sudo apt install uv
 
 # Copy the testing source for debian Trixie so we can...
-sudo cp testing.list /etc/apt/sources.list.d
+cp testing.list /etc/apt/sources.list.d
 
 # ... Install gawk 5.3 -- with built in csv support
-sudo apt update
-sudo apt install -t testing gawk
+apt update
+apt install -y -t testing gawk
 
 # Clone the SAIPy project
 git clone https://github.com/srivastavaresearchgroup/SAIPy.git
 
 mkdir ./SAIPy/config
+mkdir /ha-config
 
 # Move My Quake Shakes project files into th SAIPy folder 
 # Copy and name correctly the template based csvs into the SAIPy folder
 # Could likely make this not needed but this is how it was built and isn't much of an issue at the moment so not putting time into changing it
 mv run-mqs.sh ./SAIPy
-mv custom-actions.sh ./SAIPy/config
 cp stations-template.csv ./SAIPy/config/stations.csv
 cp home_range-template.csv ./SAIPy/config/home_range.csv
 mv my_quake_shakes.py ./SAIPy
 mv run_dates.csv ./SAIPy/config
+mv run.sh ./SAIPy
+mv custom-actions.sh ./SAIPy/config
 
 
 # Make the run.sh executible
 chmod +x ./SAIPy/run-mqs.sh
+chmod +x ./SAIPy/run.sh
 chmod +x ./SAIPy/config/custom-actions.sh
 
 # Change directories into the SAIPy location
@@ -52,5 +55,5 @@ python -m pip install requests lxml icalendar
 deactivate
 
 # Remove testing branch after gawk installed
-sudo rm /etc/apt/sources.list.d/testing.list
-sudo apt update
+rm /etc/apt/sources.list.d/testing.list
+apt update

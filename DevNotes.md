@@ -65,3 +65,90 @@ Currently the log notes the start of a sample process, the end time of a sample 
 ## Run Dates
 
 Similiarly to the above the script doesn't check or confirm if the samples processed correctly before marking the date run in the csv file.  So if all samples fail IRIS/EARTHSCOPE download it will still be marked as complete and can lead to false negatives.
+
+# Home Assitant App Setup
+
+This repo contains everything you need to load My Quake Shakes as a local app for Home Assistant.  Including writing and reading the ics file from the /www folder so it can be accessed by the `Remote Calendar` integration.
+
+Almost....
+
+> [!CAUTION]
+> This is an advanced setup of My Quake Shakes and is not officially supported.  Information is provided to set a direction for anyone who wants to try.
+
+The hang up is the configuration files.  I attempted at making them accessible via Home Assistant's App options and it wasn't quick to do.  Things could be re-coded to make it work but I choose not at this time.
+
+## Introduction To Steps
+
+To make this work you will need to 
+* Clone this repository
+* Edit the configuration files 
+* Create private github compatible repository
+* Upload all the files into the custom repository
+* Copy all files into a local App for Home Assistant 
+* Install My Quake Shakes via Apps in Home Assistant 
+ * Therefore hard coding your changes into the docker image
+
+> [!CAUTION]
+> DO NOT make this repo public as it WILL contain your location and possibly other personally identifiable information.
+
+
+### Step 1: 
+
+Clone the existing repository:
+
+`git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes`
+
+### Step 2: Edit Standard Configuration Files
+
+Unlike the [standard configuration steps](Configuration.md)  you need to edit the `*-template.csv` files in the repository. As the install script copies those to the correct location and renames them. As we do not have easy access to the docker container within Home Assistant we need to edit the template files for the information to be retained.
+
+* Edit `stations-template.csv` & `home_range-template.csv` according to the [standard configuration directions](Configuration.md)
+* Edit the `run_dates.csv` with your start date just as in the [standard configuration directions](Configuration.md)
+
+### Step 3: Create A Private Github Compatible Repository
+
+I used gitea.  But you need to create a private to you github repository. I only tried this using a local repo that is set to public so no one outside my network can access it but Home Assistant can access it without auth.
+
+> [!IMPORTANT]
+> In theory a private repo with authentication should be doable but I haven't tried it.
+
+### Step 4: Edit Dockerfile
+
+in the Dockerfile replace the path in this line with your custom repository path:
+
+`RUN git clone https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
+
+### Step 5: Upload Files to your Custom Repository
+
+Upload all files in the repository to your newly created custom one.
+
+### Step 6: Copy All Files to the `/addons` Folder In Home Assistant
+
+Following the [Home Assistant Custom Addon directions](https://developers.home-assistant.io/docs/apps/tutorial)
+
+Create a folder named `my-quake-shakes` under the `/addons` folder in Home Assistant.
+
+Upload the contents of your custom repository here as well.
+
+> [!NOTE]
+> Yes we ARE duplicating file uploads. You don't need the whole repo for both places but is more stright forward to just copy all files to both locations.  As the docker build process downloads the files from the repo to build the image.  
+
+As the official directions says then run "Check For Updates" to see the `My Quake Shakes` App as an option to install. 
+
+### Step 7 - Install My Quake Shakes App
+
+Click the button. And wait. And wait. And wait.  It will likely take a while to build.
+
+Then hit run and it should be off and running.
+
+### Step 8 - Backup Notes
+
+> [!NOTE]
+> SAIPy is a HUGE install so the docker image ends up between 8 & 9 **GBs**!
+
+Therfore, it is likely a good idea to exclude this from your Home Assistant Backups if you want to conserve space, cost, or time on your backups.
+
+Be warned.
+
+
+

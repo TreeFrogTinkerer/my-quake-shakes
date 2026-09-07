@@ -1,3 +1,16 @@
+# To Do Before Next Release to Main
+- [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
+- [ ] Consider that if the script is interupted events will be written but it will run again as the final date isn't written until the end
+- [X] Add Windows Support -- via Docker
+  - [ ] Files are written but received a child process error when running
+  - [ ] Add FTP command to run.ps1
+  - [ ] Add suspend command option
+  - [ ] Document non-API kick off
+  - [ ] Windows on demand only
+- [X] Add Docker Support
+  - [X] Build Docker Image
+  - [X] Build compose.yml
+
 # My Quake Shakes Introduction
 
 The Earth is ALWAYS moving even if we as humans don't notice it - most of the time.  In general the movement we notice are bigger earthquakes anything from a small rattle in the building to much more destructive events. 
@@ -74,12 +87,21 @@ When run it will...
   
 # Bonus Doing
 
-The setup for the Home Assistant card / view I am using is also included!
+* The setup for the Home Assistant card / view I am using is also included!
+* Custom actions script that runs at the end
+  * FTP ics file to a server vis custom-actions.sh script
 
 # Installation
 
-## Required Pre-Requisites
-- [ ] Debian Trixie based OS on bare metal
+There are 2 methods to running My Quake Shakes.  
+
+1) Docker - See the [Docker.md Page](Docker.md) for details on this setup
+2) Bare Metal / Direct Host OS Install - See the [Bare Metal Installation.md Page](BareMetalInstallation.md) for details on this setup
+
+Both setups have the same hardware requirements:
+
+## Hardware Requirements
+
 - [ ] At least 4GB of FREE RAM (not total system RAM)
   * If you do not have enough RAM the SAIpy process will fail
   * You need ~3GB of RAM per 15 minute raw data length
@@ -87,48 +109,31 @@ The setup for the Home Assistant card / view I am using is also included!
 - [ ] Moderately fast/modern x86_64 CPU
   * This was built and tested on a AMD Ryzen Embedded V1605B CPU (4 cores/8 threads/mobile)
     * So by no means bleeding edge
-  * It pegs all 8 CPU threads of the above processor while running
-  * Each 15 minute station sample takes about 1-2 minutes to run
-  * Faster the CPU the better it will run
-  * GPU NVIDIA CUDA acceleration is available in pytorch but it is untested in this configuration
+    * It pegs all 8 CPU threads of the above processor while running
+    * Each 15 minute station sample takes about 1-2 minutes to run
+    * Faster the CPU the better it will run
+- [ ] Clock and Time Zone set correctly on the host
+
+## Bare Metal Additional Required Pre-Requisites
+- [ ] Debian Trixie based OS on bare metal
 - [ ] python installed
-  * Any version the correct 3.11 will be installed in a virtual environment
+  * Any version 
+  * The needed 3.11 will be installed in a virtual environment
 - [ ] [uv](https://docs.astral.sh/uv/) installed
 - [ ] git installed
-- [ ] Clock and Time Zone set correctly on the host
+
 
 ## Optional Pre-Requisites
 * Web server
   * If you plan to use Home Assistant this is mandatory
+* GPU NVIDIA CUDA acceleration is available in pytorch but it is untested in this configuration
+  * Docker is CPU only
+  * Bare Metal in theory can be made to work with NVIDIA CUDA GPU acceleration
 
-### Step 1: Clone repository
+# Icon and "Logo" Image Credits
 
-`git clone https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
+Logo is only used in regards to Home Assistant icon display. It is not the official logo of My Quake Shakes
 
-### Step 2: Make `install.sh` Executable
+[Earthquake icons created by Magnific - Flaticon](https://www.flaticon.com/packs/earthquake-8)
 
-```
-cd my-quake-shake
-chmod +x install.sh
-```
-
-### Step 3: Run Installer
-`./install.sh`
-
-
-# Configuration
-
-A few CSV files need to be edited with your information before getting personalized data.  
-
-[Those steps are detailed in the Configuration.md](Configuration.md)
-
-You can run it using the sample csv files as well if if you like though I'd highly recommend you change the date in `run_dates.csv` so you don't process a few years worth of quakes on the first go.
-
-# Running My Quake Shakes
-
-`./run.sh`
-
-The output will be in
-
-`./my-quake-shakes.ics`
 
