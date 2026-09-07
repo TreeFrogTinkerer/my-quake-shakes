@@ -2,7 +2,7 @@
 FROM debian:trixie-slim
 RUN apt update
 RUN apt install -y curl git wget
-RUN git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes.git
+RUN git clone  https://github.com/TreeFrogTinkerer/my-quake-shakes.git
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 ENV PATH="/root/.local/bin:$PATH"
 WORKDIR ./my-quake-shakes/
