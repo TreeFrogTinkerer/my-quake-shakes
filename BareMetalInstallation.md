@@ -4,7 +4,7 @@ Follow the following steps to install, configure, and run on bare metal.
 
 ## Step 1: Clone repository
 
-`git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
+`git clone  https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
 
 ## Step 2: Make `install.sh` Executable
 
