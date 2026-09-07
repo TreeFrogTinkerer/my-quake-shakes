@@ -9,7 +9,7 @@ Follow the following steps to install, configure, and run on bare metal.
 ## Step 2: Make `install.sh` Executable
 
 ```
-cd my-quake-shake
+cd my-quake-shakes
 chmod +x install.sh
 ```
 
