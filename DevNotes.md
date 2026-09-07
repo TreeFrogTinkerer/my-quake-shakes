@@ -105,7 +105,7 @@ Unlike the [standard configuration steps](Configuration.md)  you need to edit th
 * Edit `stations-template.csv` & `home_range-template.csv` according to the [standard configuration directions](Configuration.md)
 * Edit the `run_dates.csv` with your start date just as in the [standard configuration directions](Configuration.md)
 
-### Step 3: Create Private Github Compatible Repository
+### Step 3: Create A Private Github Compatible Repository
 
 I used gitea.  But you need to create a private to you github repository. I only tried this using a local repo that is set to public so no one outside my network can access it but Home Assistant can access it without auth.
 
