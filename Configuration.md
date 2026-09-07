@@ -131,13 +131,13 @@ There are two columns:
 
 That is everything.  Assuming all as been setup correctly you can manually give it a test run by:
 
-`./run.sh`
+`./run-mqs.sh`
 
 ## Output location
 
 The final `my_quake_shakes.ics` file is written to the same folder it is run in.
 
-# Home Assistant Integration
+# Home Assistant Calendar Card Integration
 
 By default this card setup shows the past 30 days of events and does not dim out past events -- which these all will be. In addition to some other formating options.
 
