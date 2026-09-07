@@ -5,24 +5,30 @@ To use the docker setup you must be slightly comfortable using docker from the c
 > [!NOTE]
 > The docker image is set to update the earthquake data / ics file every 2 days.  So every 48 hours from the time you start the docker container and it finishes the script it will wait 48 hours and run again.
 
-# Build the Docker Image
+# Optional: Build the Docker Image
 
-## Step 1: Clone Repository
+By default a dockerhub image will be used.  However, if you would like to edit any of the files in the project to suit your specifically you can do so. Once your edits are done you can build
+
+## Step 0A: Clone Repository
 
 `git clone -b dev https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
 
-## Step 2: Build the Image
+## Step 0B: Make your Edits
+
+Edit the project to your liking.
+
+## Step 0C: Build the Image
 
 ```
 cd my-quake-shakes
-docker build -t my-quake-shakes .
+docker build -t my-quake-shakes-custom .
 ```
 
-This should process the `Dockerfile` and build the `my-quake-shakes` docker image which we will use in the `compose.yml` file
+This should process the `Dockerfile` and build the `my-quake-shakes-custom` docker image. You then need to update the `compose.yml` file to point to your custom image.
 
 # Configure Docker Compose File and My Quake Shake Settings
 
-## Step 3: Create & Edit compose.yml File
+## Step 1: Create & Edit compose.yml File
 
 Using `nano compose.yml` copy and past the following into it
 
@@ -58,7 +64,7 @@ You can edit the volume path to another location if you like but the following c
 > [!TIP]
 > To increase the number of cores My Quake Shake/SAIPy are allowed to use change `cpus: '2.0'` line to the max number of cores you'd like to allow it to use.  I set this to 2 cores less than what my processor has.
 
-## Step 4: Copy config files to local volume
+## Step 2: Copy config files to local volume
 
 Docker will not copy the files from the container to the local disk. So we will just copy them from this repository directly.
 
@@ -70,7 +76,7 @@ mkdir -p ./my-quake-shake-volumes/config/
 > [!NOTE]
 > If you use a Docker Volume instead of the host OS filesytem you will shouldn't need to manually copy the files in `./config` to the volume. However, if things arent working as expected check the volume contents and confirm the files are there and that the `custom-actions.sh` is set to exectable.
 
-## Step 5: Edit Configuration Files
+## Step 3: Edit Configuration Files
 
 Go through the same steps on the [Configuration Page](Configuration.md) except edit the files in the `./my-quake-shakes/config` folder instead of the standard `./config/` folder
 
@@ -87,7 +93,7 @@ Edit it with your FTP information and/or add another command to move the my-quak
 
 # Start the My Quake Shakes Container
 
-## Step 6: Start the Docker Container
+## Step 4: Start the Docker Container
 
 `docker compose up -d`
 

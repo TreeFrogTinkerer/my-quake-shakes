@@ -88,8 +88,6 @@ When run it will...
 # Bonus Doing
 
 * The setup for the Home Assistant card / view I am using is also included!
-* API Run on demand information
-* Suspend host at the end of the script running
 * Custom actions script that runs at the end
   * FTP ics file to a server vis custom-actions.sh script
 
