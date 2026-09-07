@@ -1,6 +1,8 @@
 # To Do Before Next Release to Main
 - [ ] Consider adding GeoJSON output to use on a map in Home Assistant in addition to calendar method
 - [ ] Consider that if the script is interupted events will be written but it will run again as the final date isn't written until the end
+- [ ] Make it compatible with HA App without custom docker build needed
+  - [ ] Config file access via HA
 
 # My Quake Shakes Introduction
 
