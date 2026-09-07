@@ -114,7 +114,7 @@ I used gitea.  But you need to create a private to you github repository. I only
 
 ### Step 4: Edit Dockerfile
 
-in the Dockerfile replace this line with your custom repository path:
+in the Dockerfile replace the path in this line with your custom repository path:
 
 `RUN git clone https://github.com/TreeFrogTinkerer/my-quake-shakes.git`
 
